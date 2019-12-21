@@ -34,7 +34,10 @@ table, th, td {
 
 .bigOof {
     height: 80%;
-    width: 40%;
+    width: 50%;
     margin-left: auto;
     margin-right: auto;
+}
+.last{
+    width: 200px
 }
