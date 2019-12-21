@@ -1,3 +1,5 @@
+// Main Logic Start
+
 function score(s, t){
     return (-14.009*s**4+40.075*s**3-47.792*s**2+25.881*s-4.1549) * (-432.794*t**8+2292.462*t**7-4547.893*t**6+4203.463*t**5-1920.123*t**4+608.067*t**3-276.101*t**2+75.967*t);
 }
@@ -31,21 +33,12 @@ function four_to_grade(length_of_skirt, length_of_waist_to_knee, length_of_gap, 
     return score_to_grade(score);
 }
 
+// Main Logic Stop
+
+// Web Logic Start
 /*
-
-def score_to_grade(grade_number: float) -> str:
-    grading_scheme = {'A': 6,
-                      'B': 5,
-                      'C': 4,
-                      'D': 3,
-                      'E': 2,
-                      'F': 1}
-    grade = 'Invalid'
-    for key in grading_scheme:
-        if grade_number > grading_scheme[key]:
-            if grade == 'Invalid':
-                grade = key
-            break
-    return grade
-
- */
+let range = document.querySelector("#range");
+range.addEventListener("input", function() {
+    // do something with `this.value`
+}
+*/
