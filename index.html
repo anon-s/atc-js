@@ -19,7 +19,10 @@
         </td>
     </tr>
     <tr>
-        <td><p id="result"></p></td>
+        <td><p>ATC Score</p></td>
+        <td><p id="score"></p></td>
+        <td><p>ATC Grade</p></td>
+        <td><p id="grade"></p></td>
     </tr>
 </table>
 
@@ -29,7 +32,7 @@
     let range = document.querySelector("#s");
 
     range.addEventListener("input", function() {
-        document.getElementById("result").innerHTML = this.value;
+        document.getElementById("score").innerHTML = this.value;
     });
 </script>
 </body>
