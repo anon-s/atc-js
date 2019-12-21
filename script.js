@@ -20,6 +20,17 @@ function get_t(length_of_gap, length_of_socks){
     return t = length_of_gap / length_of_socks;
 }
 
+function four_to_score(length_of_skirt, length_of_waist_to_knee, length_of_gap, length_of_socks){
+    let s = get_s(length_of_skirt, length_of_waist_to_knee);
+    let t = get_t(length_of_gap, length_of_socks);
+    return score(s, t);
+}
+
+function four_to_grade(length_of_skirt, length_of_waist_to_knee, length_of_gap, length_of_socks){
+    let score = four_to_score(length_of_skirt, length_of_waist_to_knee, length_of_gap, length_of_socks);
+    return score_to_grade(score);
+}
+
 /*
 
 def score_to_grade(grade_number: float) -> str:
