@@ -107,6 +107,12 @@
         document.getElementById("score").innerHTML = score;
         document.getElementById("grade").innerHTML = grade;
     }
+    // For the sliders
+    let skirts = document.querySelector("#skirts");
+    skirts.addEventListener("input", function() {
+        document.getElementById("skirt").value = this.value;
+        fourReplaceGrade();
+    });
 
 </script>
 </body>
