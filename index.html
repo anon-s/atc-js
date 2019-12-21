@@ -35,21 +35,17 @@
 
 </div>
 <script>
-    // Input for S and T
-    var s_range = document.getElementById("s");
-    var t_range = document.getElementById("t");
-    var s_value = s_range.value;
-    var t_value = t_range.value;
 
-    s_range.addEventListener("input", function(){
-        var s_value = this.value;
-        document.getElementById("score").innerHTML = this.value;
-    });
-
-    t_range.addEventListener("input", function(){
-        var t_value = t_range.value;
-        document.getElementById("grade").innerHTML = this.value;
-    });
+    function scoreGrade(){
+        let s_range = document.getElementById("s");
+        let t_range = document.getElementById("t");
+        let s_value = s_range.value;
+        let t_value = t_range.value;
+        let score = score(s_value, t_value);
+        let grade = score_to_grade(score);
+        document.getElementById("score").innerHTML = score;
+        document.getElementById("grade").innerHTML = grade;
+    }
 
 </script>
 </body>
