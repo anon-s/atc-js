@@ -9,14 +9,24 @@
 <body class="centered-wrapper">
 
 <div class="centered-content">
-
-<input type="range" id="slider" min="1.0" max="3.0" step="0.1" value="2.0" />
-<p id="result"></p>
+<table>
+    <tr>
+        <td>
+            <p>S value</p>
+        </td>
+        <td>
+            <input type="number" id="s" min="0" step="0.1" value="2.0" />
+        </td>
+    </tr>
+    <tr>
+        <td><p id="result"></p></td>
+    </tr>
+</table>
 
 </div>
 
 <script>
-    let range = document.querySelector("#slider");
+    let range = document.querySelector("#s");
 
     range.addEventListener("input", function() {
         document.getElementById("result").innerHTML = this.value;
