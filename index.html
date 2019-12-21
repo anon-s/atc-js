@@ -41,9 +41,8 @@
         let t_range = document.getElementById("t");
         let s_value = s_range.value;
         let t_value = t_range.value;
-        let score = score(s_value, t_value);
-        let grade = score_to_grade(score);
-        document.getElementById("score").innerHTML = score;
+        let grade = st_to_grade(s_value, t_value);
+        document.getElementById("score").innerHTML = s_value;
         document.getElementById("grade").innerHTML = grade;
     }
 

@@ -14,6 +14,10 @@ function score_to_grade(grade_number){
     else {return "Invalid";}
 }
 
+function st_to_grade(s, t){
+    return score_to_grade(score(s, t));
+}
+
 function get_s(length_of_skirt, length_of_waist_to_knee){
     return length_of_skirt / length_of_waist_to_knee;
 }
