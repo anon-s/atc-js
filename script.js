@@ -12,6 +12,14 @@ function score_to_grade(grade_number){
     else {return "Invalid";}
 }
 
+function get_s(length_of_skirt, length_of_waist_to_knee){
+    return length_of_skirt / length_of_waist_to_knee;
+}
+
+function get_t(length_of_gap, length_of_socks){
+    return t = length_of_gap / length_of_socks;
+}
+
 /*
 
 def score_to_grade(grade_number: float) -> str:
