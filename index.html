@@ -24,32 +24,32 @@
             <input type="number" id="t" min="0" step="0.1" value="2.0" />
         </td>
     </tr>
+    <tr><td colspan="4"><button onclick="scoreGrade()">Calculate!</button></td></tr>
     <tr>
         <td><p>ATC Score</p></td>
-        <td><p id="score"></p></td>
+        <td><p id="score">2</p></td>
         <td><p>ATC Grade</p></td>
-        <td><p id="grade"></p></td>
+        <td><p id="grade">A</p></td>
     </tr>
 </table>
 
 </div>
 <script>
     // Input for S and T
-    let s_range = document.querySelector("#s");
-    let t_range = document.querySelector("$t");
+    var s_range = document.getElementById("s");
+    var t_range = document.getElementById("t");
+    var s_value = s_range.value;
+    var t_value = t_range.value;
 
-    // Change Score function
-    const changeScore = function(event) {
-        let s = s_range.value;
-        let t = t_range.value;
-        let score = score(s, t);
-        let grade = score_to_grade(score);
-        document.getElementById("score").innerHTML = score;
-        document.getElementById("grade").innerHTML = grade;
-    };
+    s_range.addEventListener("input", function(){
+        var s_value = this.value;
+        document.getElementById("score").innerHTML = this.value;
+    });
 
-    s_range.addEventListener("input", changeScore, false);
-    t_range.addEventListener("input", changeScore, false);
+    t_range.addEventListener("input", function(){
+        var t_value = t_range.value;
+        document.getElementById("grade").innerHTML = this.value;
+    });
 
 </script>
 </body>
