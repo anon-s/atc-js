@@ -53,13 +53,24 @@
 </div>
 <script>
     function fourScoreGrade() {
-
+        let skirt_input = document.getElementById("skirt");
+        let waist2knee_input = document.getElementById("waist2knee");
+        let gap_input = document.getElementById("gap");
+        let sock_input = document.getElementById("sock");
+        let skirt_value = skirt_input.value;
+        let waist2knee_value = waist2knee_input.value;
+        let gap_value = gap_input.value;
+        let sock_value = sock_input.value;
+        let score = four_to_score(skirt_value, waist2knee_value, gap_value, sock_value);
+        let grade = four_to_grade(skirt_value, waist2knee_value, gap_value, sock_value);
+        document.getElementById("score").innerHTML = score;
+        document.getElementById("grade").innerHTML = grade;
     }
     function scoreGrade(){
-        let s_range = document.getElementById("s");
-        let t_range = document.getElementById("t");
-        let s_value = s_range.value;
-        let t_value = t_range.value;
+        let s_input = document.getElementById("s");
+        let t_input = document.getElementById("t");
+        let s_value = s_input.value;
+        let t_value = t_input.value;
         let score = str_score(s_value, t_value);
         let grade = st_to_grade(s_value, t_value);
         document.getElementById("score").innerHTML = score;
