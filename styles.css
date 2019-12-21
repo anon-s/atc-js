@@ -21,7 +21,20 @@ html, body {
     vertical-align: middle;
 }
 /* end of stack overflow */
-.toCenter{
-    margin-left:auto;
-    margin-right:auto;
+
+/* For Table borders */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+.bigOof {
+    height: 80%;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
 }
