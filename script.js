@@ -4,6 +4,10 @@ function score(s, t){
     return (-14.009*s**4+40.075*s**3-47.792*s**2+25.881*s-4.1549) * (-432.794*t**8+2292.462*t**7-4547.893*t**6+4203.463*t**5-1920.123*t**4+608.067*t**3-276.101*t**2+75.967*t);
 }
 
+function str_score(s, t){
+    return score(s, t).toString();
+}
+
 function score_to_grade(grade_number){
     if(grade_number > 6){return "A";}
     else if (grade_number > 5){return "B";}
