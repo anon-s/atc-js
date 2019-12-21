@@ -17,6 +17,12 @@
         <td>
             <input type="number" id="s" min="0" step="0.1" value="2.0" />
         </td>
+        <td>
+            <p>T value</p>
+        </td>
+        <td>
+            <input type="number" id="t" min="0" step="0.1" value="2.0" />
+        </td>
     </tr>
     <tr>
         <td><p>ATC Score</p></td>
@@ -27,11 +33,11 @@
 </table>
 
 </div>
-
 <script>
-    let range = document.querySelector("#s");
-
-    range.addEventListener("input", function() {
+    // Input for S
+    let s_range = document.querySelector("#s");
+    let t_range = document.querySelector("$t");
+    s_range.addEventListener("input", function() {
         document.getElementById("score").innerHTML = this.value;
     });
 </script>
