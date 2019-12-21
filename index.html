@@ -34,12 +34,23 @@
 
 </div>
 <script>
-    // Input for S
+    // Input for S and T
     let s_range = document.querySelector("#s");
     let t_range = document.querySelector("$t");
-    s_range.addEventListener("input", function() {
-        document.getElementById("score").innerHTML = this.value;
-    });
+
+    // Change Score function
+    const changeScore = function(event) {
+        let s = s_range.value;
+        let t = t_range.value;
+        let score = score(s, t);
+        let grade = score_to_grade(score);
+        document.getElementById("score").innerHTML = score;
+        document.getElementById("grade").innerHTML = grade;
+    };
+
+    s_range.addEventListener("input", changeScore, false);
+    t_range.addEventListener("input", changeScore, false);
+
 </script>
 </body>
 </html>
