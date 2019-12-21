@@ -36,9 +36,3 @@ function four_to_grade(length_of_skirt, length_of_waist_to_knee, length_of_gap, 
 // Main Logic Stop
 
 // Web Logic Start
-/*
-let range = document.querySelector("#range");
-range.addEventListener("input", function() {
-    // do something with `this.value`
-}
-*/
