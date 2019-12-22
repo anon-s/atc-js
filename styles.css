@@ -1,4 +1,4 @@
-/* start of stack overflow */
+/* start of stack overflow
 html, body {
     width: 100%;
     height: 100%;
@@ -20,7 +20,7 @@ html, body {
     display: inline-block;
     vertical-align: middle;
 }
-/* end of stack overflow */
+ end of stack overflow */
 
 /* For Table borders */
 table {
@@ -38,6 +38,11 @@ table {
     width: 60%;
     margin-left: auto;
     margin-right: auto;
+}
+.smallOof{
+    display: inline-block;
+    vertical-align: middle;
+    horiz-align: center;
 }
 .last{
     width: 200px
