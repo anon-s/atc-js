@@ -28,14 +28,14 @@ table {
     width: 100%;
 }
 
-table, th, td {
-    background-color: #EEE;
-    border: 1px solid black;
+.border {
+    background-color: #333;
+    border: 1px solid #DDD;
 }
 /* Custom */
 .bigOof {
     height: 80%;
-    width: 50%;
+    width: 60%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -45,11 +45,15 @@ table, th, td {
 
 /* Best m** website css*/
 body{
-    background-color: #EEE;
+    background-color: #333;
     line-height:1.6;
     font-size:18px;
-    color:#333;
+    color: #DDD;
     padding:0 10px
+}
+input{
+    color: #333;
+    background-color: #DDD;
 }
 
 h1,h2,h3{
