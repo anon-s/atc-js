@@ -29,14 +29,18 @@
         <td><input type="number" id="sock" min="0" step="0.1" value="2.0" /></td>
     </tr>
     <tr>
-        <td>
+        <td rowspan="2">
             <p>S value</p>
         </td>
+        <td><input type="range" id="ss" min="0" step="0.1" value="2.0" /></td>
+        <td rowspan="2">
+            <p>T value</p>
+        </td>
+        <td><input type="range" id="ts" min="0" step="0.1" value="2.0" /></td>
+    </tr>
+    <tr>
         <td>
             <input type="number" id="s" min="0" step="0.1" value="2.0" />
-        </td>
-        <td>
-            <p>T value</p>
         </td>
         <td>
             <input type="number" id="t" min="0" step="0.1" value="2.0" />
@@ -142,7 +146,7 @@
         document.getElementById("socks").value = this.value;
         fourReplaceGrade();
     });
-    // for s, t to instantly change the score and grade
+    // for s, t to instantly change the score and grade  // and slider
     let s = document.querySelector("#s");
     s.addEventListener("input", function() {
         scoreGrade();
@@ -151,6 +155,18 @@
     t.addEventListener("input", function() {
         scoreGrade();
     });
+    // for s, t sliders
+    let ss = document.querySelector("#ss");
+    ss.addEventListener("input", function() {
+        document.getElementById("s").value = this.value;
+        scoreGrade();
+    });
+    let ts = document.querySelector("#ts");
+    ts.addEventListener("input", function() {
+        document.getElementById("t").value = this.value;
+        scoreGrade();
+    });
+
 
 </script>
 </body>
