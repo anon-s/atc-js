@@ -29,9 +29,10 @@ table {
 }
 
 table, th, td {
+    background-color: #EEE;
     border: 1px solid black;
 }
-
+/* Custom */
 .bigOof {
     height: 80%;
     width: 50%;
@@ -40,4 +41,17 @@ table, th, td {
 }
 .last{
     width: 200px
+}
+
+/* Best m** website css*/
+body{
+    background-color: #EEE;
+    line-height:1.6;
+    font-size:18px;
+    color:#333;
+    padding:0 10px
+}
+
+h1,h2,h3{
+    line-height:1.2
 }
