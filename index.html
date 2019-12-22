@@ -128,6 +128,27 @@
         document.getElementById("sock").value = this.value;
         fourReplaceGrade();
     });
+    // For moving the sliders based on number input
+    let skirt = document.querySelector("#skirt");
+    skirt.addEventListener("input", function() {
+        document.getElementById("skirts").value = this.value;
+        fourReplaceGrade();
+    });
+    let waist2knee = document.querySelector("#waist2knee");
+    waist2knee.addEventListener("input", function() {
+        document.getElementById("waist2knees").value = this.value;
+        fourReplaceGrade();
+    });
+    let gap = document.querySelector("#gap");
+    gap.addEventListener("input", function() {
+        document.getElementById("gaps").value = this.value;
+        fourReplaceGrade();
+    });
+    let sock = document.querySelector("#sock");
+    sock.addEventListener("input", function() {
+        document.getElementById("socks").value = this.value;
+        fourReplaceGrade();
+    });
 
 </script>
 </body>
