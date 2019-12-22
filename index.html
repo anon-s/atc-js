@@ -66,10 +66,27 @@
         <td><p id="grade">-</p></td>
     </tr>
 </table>
-        <div id="shapes">
-            <div class="skirtshape"></div>
-            <div class="gapshape"></div>
-            <div class="sockshape"></div>
+        <div id="shapes" style="position: relative;">
+            <div style="width: 100px; position: relative">
+                <div class="skirtshape"></div>
+
+                <div style="width: 50px; position: absolute; top: 0; left: 50%; transform: translate(-50%, -0%); z-index: 3;">
+                    <div class="legshape" style="float: left"></div>
+                    <div style="width: 10px;"></div>
+                    <div class="legshape" style="float: right"></div>
+                </div>
+            </div>
+
+            <div style="width: 50px">
+                <div class="gapshape" style="float: left;"></div>
+                <div style="width: 10px;"></div>
+                <div class="gapshape" style="float: right;"></div>
+            </div>
+            <div style="width: 50px">
+                <div class="sockshape" style="float: left;"></div>
+                <div style="width: 10px"></div>
+                <div class="sockshape" style="float: right;"></div>
+            </div>
         </div>
     </center>
 </div>
