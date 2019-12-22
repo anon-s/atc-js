@@ -27,6 +27,9 @@ table {
     border-collapse: collapse;
     width: 100%;
 }
+td {
+     text-align:center;
+}
 
 .border {
     background-color: #333;
@@ -63,4 +66,17 @@ input{
 
 h1,h2,h3{
     line-height:1.2
+}
+/* The shapes */
+.skirtshape {
+    border-bottom: 25px solid #E22;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    height: 0;
+    width:50px;
+}
+.gapshape {
+    height: 25px;
+    width: 50px;
+    background-color: #ecbcb4 ;
 }
