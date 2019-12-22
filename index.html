@@ -149,6 +149,15 @@
         document.getElementById("socks").value = this.value;
         fourReplaceGrade();
     });
+    // for s, t to instantly change the score and grade
+    let s = document.querySelector("#s");
+    s.addEventListener("input", function() {
+        scoreGrade();
+    });
+    let t = document.querySelector("#t");
+    t.addEventListener("input", function() {
+        scoreGrade();
+    });
 
 </script>
 </body>
