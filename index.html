@@ -149,10 +149,12 @@
     // for s, t to instantly change the score and grade  // and slider
     let s = document.querySelector("#s");
     s.addEventListener("input", function() {
+        document.getElementById("ss").value = this.value;
         scoreGrade();
     });
     let t = document.querySelector("#t");
     t.addEventListener("input", function() {
+        document.getElementById("ts").value = this.value;
         scoreGrade();
     });
     // for s, t sliders
