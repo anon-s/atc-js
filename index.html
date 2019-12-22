@@ -17,23 +17,23 @@
     <tr>
         <td class="border">
             <p>Length of skirt</p>
-            <input type="range" id="skirts" min="0" step="0.1" value="2.0" />
-            <input type="number" id="skirt" min="0" step="0.1" value="2.0" />
+            <input type="range" id="skirts" min="0.1" step="0.1" value="2.0" />
+            <input type="number" id="skirt" min="0.1" step="0.1" value="2.0" />
         </td>
         <td class="border">
             <p>Length of waist to knee</p>
-            <input type="range" id="waist2knees" min="0" step="0.1" value="2.0" />
-            <input type="number" id="waist2knee" min="0" step="0.1" value="2.0" />
+            <input type="range" id="waist2knees" min="0.1" step="0.1" value="2.0" />
+            <input type="number" id="waist2knee" min="0.1" step="0.1" value="2.0" />
         </td>
         <td class="border">
             <p>Length of gap</p>
-            <input type="range" id="gaps" min="0" step="0.1" value="2.0" />
-            <input type="number" id="gap" min="0" step="0.1" value="2.0" />
+            <input type="range" id="gaps" min="0.1" step="0.1" value="2.0" />
+            <input type="number" id="gap" min="0.1" step="0.1" value="2.0" />
         </td>
         <td class="border">
             <p>Length of sock</p>
-            <input type="range" id="socks" min="0" step="0.1" value="2.0" />
-            <input type="number" id="sock" min="0" step="0.1" value="2.0" />
+            <input type="range" id="socks" min="0.1" step="0.1" value="2.0" />
+            <input type="number" id="sock" min="0.1" step="0.1" value="2.0" />
         </td>
     </tr>
     <tr>
@@ -43,18 +43,18 @@
         <td rowspan="2">
             <p>S value</p>
         </td>
-        <td><input type="range" id="ss" min="0" step="0.1" value="2.0" /></td>
+        <td><input type="range" id="ss" min="0.00001" step="0.1" value="2.0" /></td>
         <td rowspan="2">
             <p>T value</p>
         </td>
-        <td><input type="range" id="ts" min="0" step="0.1" value="2.0" /></td>
+        <td><input type="range" id="ts" min="0.00001" step="0.1" value="2.0" /></td>
     </tr>
     <tr>
         <td>
-            <input type="number" id="s" min="0" step="0.1" value="2.0" />
+            <input type="number" id="s" min="0.00001" step="0.1" value="2.0" />
         </td>
         <td>
-            <input type="number" id="t" min="0" step="0.1" value="2.0" />
+            <input type="number" id="t" min="0.00001" step="0.1" value="2.0" />
         </td>
     </tr>
     <tr>
@@ -100,9 +100,10 @@
         let waist2knee_value = waist2knee_input.value;
         let gap_value = gap_input.value;
         let sock_value = sock_input.value;
-        let score = four_to_score(skirt_value, waist2knee_value, gap_value, sock_value);
+        let score_old = four_to_score(skirt_value, waist2knee_value, gap_value, sock_value);
+        let score = parseFloat(score_old).toFixed(2).toString();
         let grade = four_to_grade(skirt_value, waist2knee_value, gap_value, sock_value);
-        document.getElementById("score").innerHTML = score;
+        document.getElementById("score").innerHTML = typeof(score);
         document.getElementById("grade").innerHTML = grade;
     }
     function scoreGrade(){
@@ -110,8 +111,9 @@
         let t_input = document.getElementById("t");
         let s_value = s_input.value;
         let t_value = t_input.value;
-        let score = str_score(s_value, t_value);
+        let score_old = str_score(s_value, t_value);
         let grade = st_to_grade(s_value, t_value);
+        let score = parseFloat(score_old).toFixed(2).toString();
         document.getElementById("score").innerHTML = score;
         document.getElementById("grade").innerHTML = grade;
     }
