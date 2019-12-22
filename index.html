@@ -101,18 +101,15 @@
         document.getElementById("s").value = s_value;
         document.getElementById("ss").value = s_value;
         // For the dummy legs
-        // Array.from(document.getElementsByClassName("skirtshape")).forEach(function(element) {
-        //     element.style.borderBottom = skirt_value;
-        // });
         let skirtshapes = document.getElementsByClassName("skirtshape");
         let skirtshapesindex;
         for (skirtshapesindex = 0; skirtshapesindex < skirtshapes.length; skirtshapesindex++){
             skirtshapes[skirtshapesindex].style.borderBottom = `${skirt_value}px solid #E22`;
         }
-        let waist2kneesshapes = document.getElementsByClassName("waist2kneeshape");
-        let waist2kneesshapesindex;
-        for (waist2kneesshapesindex = 0; waist2kneesshapesindex < waist2kneesshapes.length; waist2kneesshapesindex++){
-            waist2kneesshapes[waist2kneesshapesindex].style.height = `${waist2knee_value}px`;
+        let waist2kneeshapes = document.getElementsByClassName("waist2kneeshape");
+        let waist2kneeshapesindex;
+        for (waist2kneeshapesindex = 0; waist2kneeshapesindex < waist2kneeshapes.length; waist2kneeshapesindex++){
+            waist2kneeshapes[waist2kneeshapesindex].style.height = `${waist2knee_value}px`;
         }
     }
 
@@ -124,6 +121,17 @@
         let t_value = get_t(gap_value, sock_value).toString();
         document.getElementById("t").value = t_value;
         document.getElementById("ts").value = t_value;
+        // For the dummy legs
+        let gapshapes = document.getElementsByClassName("gapshape");
+        let gapshapesindex;
+        for (gapshapesindex = 0; gapshapesindex < gapshapes.length; gapshapesindex++){
+            gapshapes[gapshapesindex].style.height = `${gap_value}px`;
+        }
+        let sockshapes = document.getElementsByClassName("sockshape");
+        let sockshapesindex;
+        for (sockshapesindex = 0; sockshapesindex < sockshapes.length; sockshapesindex++){
+            sockshapes[sockshapesindex].style.height = `${sock_value}px`;
+        }
     }
 
     function fourReplaceGrade(){
