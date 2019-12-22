@@ -71,9 +71,9 @@
                 <div class="skirtshape"></div>
 
                 <div style="width: 50px; position: absolute; top: 0; left: 50%; transform: translate(-50%, -0%); z-index: 3;">
-                    <div class="legshape" style="float: left"></div>
+                    <div class="waist2kneeshape" style="float: left"></div>
                     <div style="width: 10px;"></div>
-                    <div class="legshape" style="float: right"></div>
+                    <div class="waist2kneeshape" style="float: right"></div>
                 </div>
             </div>
 
@@ -101,9 +101,19 @@
         document.getElementById("s").value = s_value;
         document.getElementById("ss").value = s_value;
         // For the dummy legs
-        Array.from(document.getElementsByClassName("skirtshape")).forEach(function(element) {
-            element.style.borderBottom = skirt_value;
-        });
+        // Array.from(document.getElementsByClassName("skirtshape")).forEach(function(element) {
+        //     element.style.borderBottom = skirt_value;
+        // });
+        let skirtshapes = document.getElementsByClassName("skirtshape");
+        let skirtshapesindex;
+        for (skirtshapesindex = 0; skirtshapesindex < skirtshapes.length; skirtshapesindex++){
+            skirtshapes[skirtshapesindex].style.borderBottom = `${skirt_value}px solid #E22`;
+        }
+        let waist2kneesshapes = document.getElementsByClassName("waist2kneeshape");
+        let waist2kneesshapesindex;
+        for (waist2kneesshapesindex = 0; waist2kneesshapesindex < waist2kneesshapes.length; waist2kneesshapesindex++){
+            waist2kneesshapes[waist2kneesshapesindex].style.height = `${waist2knee_value}px`;
+        }
     }
 
     function gap_sock_to_t_value(){
