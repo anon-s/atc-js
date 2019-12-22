@@ -23,6 +23,9 @@ html, body {
  end of stack overflow */
 
 /* For Table borders */
+table{
+    border-collapse: collapse;
+}
 .normalTable {
     border-collapse: collapse;
     width: 100%;
@@ -34,6 +37,7 @@ td {
 .border {
     background-color: #333;
     border: 1px solid #DDD;
+    border-collapse: collapse;
 }
 /* Custom */
 .bigOof {
@@ -70,12 +74,20 @@ h1,h2,h3{
 /* The shapes */
 .skirtshape {
     position: relative;
-    border-bottom: 30px solid #E22;
+    border-bottom: 40px solid #E22;
     border-left: 25px solid transparent;
     border-right: 25px solid transparent;
     height: 0;
     width:50px;
     z-index: 1;
+}
+.legshape {
+    position: relative;
+    height: 50px;
+    width: 20px;
+    opacity: 0.5;
+    background-color: #B47B74;
+    z-index: 5;
 }
 .gapshape {
     position: relative;
@@ -90,12 +102,4 @@ h1,h2,h3{
     width: 20px;
     background-color: #EEE ;
     z-index: 1;
-}
-.legshape {
-    position: relative;
-    height: 35px;
-    width: 20px;
-    opacity: 0.5;
-    background-color: #B47B74;
-    z-index: 5;
 }
