@@ -45,18 +45,18 @@
         <td rowspan="2">
             <p>S value</p>
         </td>
-        <td><input type="range" id="ss" min="0.001" step="0.1" value="0.8" /></td>
+        <td><input type="range" id="ss" min="0.001" max="5" step="0.1" value="0.8" /></td>
         <td rowspan="2">
             <p>T value</p>
         </td>
-        <td><input type="range" id="ts" min="0.001" step="0.1" value="0.25" /></td>
+        <td><input type="range" id="ts" min="0.001" max="5" step="0.1" value="0.25" /></td>
     </tr>
     <tr>
         <td>
-            <input type="number" id="s" min="0.001" step="0.1" value="0.8" />
+            <input type="number" id="s" min="0.001" max="5" step="0.1" value="0.8" />
         </td>
         <td>
-            <input type="number" id="t" min="0.001" step="0.1" value="0.25" />
+            <input type="number" id="t" min="0.001" max="5" step="0.1" value="0.25" />
         </td>
     </tr>
     <tr>
@@ -229,7 +229,10 @@
         scoreGrade();
     });
 
+</script>
 
+<script>
+    scoreGrade();
 </script>
 </body>
 </html>
